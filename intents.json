@@ -1,0 +1,295 @@
+{"intents": [
+        {"tag": "salutation",
+         "patterns": ["Bonjour comment vas-tu ?","Comment ça va ?","Est-ce que quelqu'un est là ?","Bonjour","Bonsoir","A plus tard","C'est bien de discuter avec vous, au revoir"],
+         "responses": ["Bonjour, je vais bien. Comment puis-je vous aider ?","Je vais bien. Ravi de parler avec vous","Bonjour, comment puis-je vous aider ?","Bonjour, comment puis-je vous aider ?","Bonsoir, comment puis-je vous aider ?","A bientôt !","Au revoir ! Reviens bientôt"]
+        },
+        {"tag": "aurevoir",
+         "patterns": ["Au revoir","A la prochaine","Adieu !","A bientôt !","Au revoir"],
+         "responses": ["A plus tard","Au revoir ! Reviens bientôt","Au revoir ! Reviens bientôt","Au revoir ! Reviens bientôt","Excellente journée"]
+        },
+        {"tag": "Merci",
+         "patterns": ["Merci","Merci bien","C'est utile","Enchanté","Super, merci","Merci de m'avoir aidé"],
+         "responses": ["Merci","Merci","Heureux de vous avoir aidé !","Merci","Revenez à tout moment !","C'était un plaisir !"]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Donnez-moi plus d'information","Je ne suis pas sûr de pouvoir vous comprendre","Désolé, j'ai besoin d'une question"]
+        },
+        {"tag": "typesdedonnées",
+         "patterns": ["Comment pourriez-vous m'aider avec les types de données ?","Que peut-on faire avec les types de données ?","Qu'est-ce que les types de données ?","Que sont les types de données ?","C'est quoi un type données ?","Comment utiliser les types de données ?","Pourquoi utiliser les types de données ?","Pourquoi utilise-t-on les types de données ?","Qu'appelle-t-on les types de données ?"],
+         "responses": ["En Python, il y a différents types. Les types de données primitifs sont : int, float, bool et str (pour les string, chaînes de caractères). 3 est un int. 2.05 est un float. True est un bool. ''Bonjour'' et 'Bonjour' sont des str. On peut également définir de nouveaux types, par exemple avec des classes."]
+        },
+ 	{"tag": "typesprimitifs",
+         "patterns": ["Quels sont les types de données ?", "Quels sont les types primitifs ?", "types primitifs", "type","types"],
+         "responses": ["En Python, les types de données primitifs sont : int, float, bool et str (pour les string, chaînes de caractères. 3 est un int. 2.05 est un float. True est un bool. ''Bonjour'' et 'Bonjour' sont des str."]
+       },
+       {"tag": "integer",
+        "patterns": ["Qu'est-ce que le type int ?","Qu'est-ce que int ?","type int","int","C'est quoi le type int ?","Qu'est-ce que le type entier en Python ?","C'est quoi le type entier en Python ?", "Comment représente-t-on un entier en Python ?"],
+        "responses": ["int est un type primitif de Python. Les ints sont des nombres entiers (donc sans décimaux). Ils peuvent être positifs ou négatifs. 657 et -389 sont des ints."]
+       },
+       {"tag": "float",
+        "patterns": ["Qu'est-ce que le type float ?","Qu'est-ce que float ?","type float","float","C'est quoi le type float ?","Qu'est-ce que le type flottant en Python ?","C'est quoi le type pour les flottants en Python ??", "Quel type utiliser pour les nombres flottants ?","Quel type utiliser pour les flottants ?"],
+        "responses": ["float est un type primitif de Python. Les floats sont des nombres reels. On les appelle floattants. Ils peuvent etre positifs ou negatifs. Ils sont ecrits avec une virgule decimale qui separe l'entier des nombres fractionnaires.  634.25, 56.10 et 7.0 sont des floats."]
+       },
+       {"tag": "complex",
+        "patterns": ["Qu'est-ce que le type complex ?","Qu'est-ce que complex ?","type complex","complex","C'est quoi le type complex ?","Comment représenter un nombre complexe en Python ?","nombre complex en Python"],
+        "responses": ["Le type complex permet de représenter les nombres complexes en Python. Les nombres complexes ont une partie réelle et une partie imaginaire. Ils prennent la forme a + b j où a et b sont la partie réelle et imaginaire. 6 + 3j est un nombre complexe en Python."]
+       },
+       {"tag": "booléen",
+        "patterns": ["Qu'est-ce que le type bool ?","Qu'est-ce que bool ?","type bool","booléen","booléen","type booléen","C'est quoi le type bool ?","Qu'est-ce que le type pour les booléens en Python ?","Comment représente-t-on un booléen en Python ?","booléen","C'est quoi un booléen ?"],
+        "responses": ["bool est un type primitif de Python. True (Vrai) et False (Faux) sont des bools. True et False ont une majuscule. Le type bool est utilisé dans des comparaisons, dans des conditions de boucles etc. "]
+       },
+       {"tag": "Syntaxepython",
+        "patterns": ["C'est quoi la syntaxe de Python ?","Syntaxe python","syntaxe","Quelles sont les spécificités de la syntaxe Python ?"],
+        "responses": ["Tout langage de programmation a une syntaxe. La syntaxe Python fait référence à l'ensemble des regles definissant comment un programme Python doit être écrit. En Python, il faut mettre des indentations dans le code. Ceci est une spécificité de Python."]
+       },
+       {"tag": "motsclés",
+        "patterns": ["Quels sont les mots clés ?","C'est quoi les  mots clés ?","Quels sont les mots réservés ?","C'est quoi les mots réservés ?","ça veut dire quoi les mots clés ? ","ça veut dire quoi les mots réservés ?","les mots clés","mots clés","les mots réservés","mots réservés"],
+        "responses": ["Les mots cles / reserves de Python (35) sont les suivants : and, as, assert, break, class, continue, def, del, elif, else, except, exec, False, finally, for, from, global, if, import, in, is, lambda, None, not, or, pass, print, raise, return, True, try, while, with, yield. Ils ne doivent pas être utilisés dans le code comme variable, constante, nom de fonction ou identifiant. La liste est disponible en utilisant : dir(__builtin__)."]
+       },
+       {"tag": "identifiant",
+        "patterns": ["Qu'est-ce qu'un identifiant ?","identifiant","C'est quoi un identifiant ?"],
+        "responses": ["Un identifiant Python est le nom donné à une variable, fonction, classe, module etc. Toute entité doit être nommée ou identifiée de manière appropriée pour être utilisée dans un programme."]
+       },
+       {"tag": "syntaxed'unidentifiant",
+        "patterns": ["Quelle est la syntaxe d'un identifiant ?","Quelle est la forme d'un identifiant ?","Comment nommer un identifiant ?","Comme appeler un identifiant ?"],
+        "responses": ["Un identifiant Python peut être une combinaison de lettres majuscules, minuscules, traits de soulignement et chiffres (0-9). myClass, my_variable,var_1, et print_hello_world sont des noms valides d'identifiants. Les caractères spéciaux tels que %, @ et $ ne sont pas autorisés dans les identifiants. Un identifiant ne peut pas commencer par un nombre. 2text n'est pas valide. Python est un langage sensible à la casse. text2 est différent de Text2. "]
+       },
+       {"tag": "unicode",
+        "patterns": ["C'est quoi unicode ?","unicode"],
+        "responses": ["Une chaine de caracteres est une sequence de caracteres Unicode qui peut etre une combinaison de lettres, de chiffres et de symboles speciaux. Le type d'une chaine de caracteres est str. Une chaine est entouree de guillemets simples ou doubles.", "Unicode est un standard qui permet des echanges de textes dans differentes langues, incluant les langues qui ne sont pas basees sur l’alphabet latin."]
+       },
+       {"tag": "variable",
+        "patterns": ["C'est quoi une variable ?","A quoi sert une variable ?","Qu'est-ce qu'une variable ?","Comment déclarer une variable ?","Comment définir une variable ?","définir une variable","déclarer une variable","Pourquoi utilise-t-on les variables ?"],
+        "responses": ["Une variable est comme un conteneur qui stocke des valeurs auxquelles vous pouvez accéder et que vous pouvez modifier en utilisant leur identifiant ou nom. Les variables sont stockées en mémoire. On peut déclarer une variable en lui donnant une valeur. Dans un = 1, la variable un prend la valeur 1. On dit qu'on affecte la valeur 1 à la variable 1. La variable étant définie, elle peut être utilisée."]
+       },
+       {"tag": "affecterunevariable",
+        "patterns": ["Comment affecter une variable ?","Qu'est-ce qu'une affectation de variable ?","Qu'est-ce qu'une affectation ?","affectation","affecter"],
+        "responses": ["Une variable est comme un conteneur qui stocke des valeurs auxquelles vous pouvez accéder et que vous pouvez modifier en utilisant leur identifiant ou nom. Les variables sont stockées en mémoire. On peut déclarer une variable en lui donnant une valeur. Dans un = 1, la variable un prend la valeur 1. On dit qu'on affecte la valeur 1 à la variable 1. La variable étant définie, elle peut être utilisée."]
+       },
+       {"tag": "opérateurs",
+        "patterns": ["Quels sont les opérateurs de base ?","Quels sont les opérateurs ?","opérateurs de base","opérateurs","Quels sont les types d'opérateurs ?","types d'opérateurs","Quels sont les opérateurs de comparaison ?","opérateurs de comparaison","Quels sont les opérateurs logiques ?","opérateurs logiques","Quels sont les opérateurs d'affectation ?","opérateurs d'affectation","Quels sont les opérateurs d'identité ?","opérateurs d'identité"],
+        "responses": ["Python a différents types d’opérateurs. opérateurs arithmétiques : +, -, *, /, %, // (division entière) et ** (puissance). opérateurs d'affectation : =, +=, *=, /=, //=. opérateurs relationnels ou de comparaison : = =, >, <, !=, =<, =>.  opérateurs logiques : or, and, not. opérateurs d'identité : is, is not."]
+       },
+       {"tag": "opérateursarithmétiques",
+        "patterns": ["Comment calculer en Python ?","Comment calcule-t-on en Python ?","opérateurs arithmétiques","Quels sont les opérateurs arithmétiques ?","Comment faire des calculs en Python ?"],
+        "responses": ["On peut faire des calculs en Python. Pour additionner : x + y. Pour  soustraire : x – y.  Pour multiplier : x*y. Pour diviser x/y. Pour utiliser une puissance : x**y. Pour avoir le reste de la division entière :  x % y. Pour avoir le dividende de la division entière : x //y. Pour incrémenter, x+1. Pour décrémenter, y-1."]
+       },
+       {"tag": "casting",
+        "patterns": ["Comment faire des conversions sur les types ?","C'est quoi une conversion de type ?","Comment faire des conversions de types ?","Comment convertir d'un type à un autre ?","Comment faire une conversion de type ?","convertir un type","convertir d'un type  à un autre", "conversion d'un type à un autre","Qu'est-ce que le casting ?","C'est quoi le casting ?","casting"],
+        "responses": ["Il y a des conversions de types explicites et implicites en Python. Les conversions explicites se font avec les fonctions int, float, bool et str. On appelle cela le casting. Pour convertir un nombre n en int, il faut utiliser la fonction int et écrire int(n). Pour convertir un nombre en flottant, il faut utiliser la fonction float et écrire flot(x). Pour convertir une chaîne c en bool, il faut utiliser la fonction bool et écrire bool(s). Pour convertir n en str, il faut utiliser la fonction str et écrire str(n). Les conversions implicites se font automatiquement. Par exemple, lorsqu'on écrit print(''Bonjour'' + 2), 2 est automatiquement converti en string."]
+       },
+       {"tag": "prioritédesopérateurs",
+        "patterns": ["Quelles sont les priorités sur les opérateurs en Python ?","Quelle est la priorité sur les opérateurs ?","priorité des opérateurs"],
+        "responses": ["La priorité des opérateurs en Python est définie de la manière suivante : 1) les parenthèses ; 2) la puissance ; 3) la multiplication, la division et le modulo ; 4) l'addition et la soustraction."]
+       },
+       {"tag": "true",
+        "patterns": ["Qu'es-ce que True ?","C'est quoi True ?","True","true","Vrai"],
+        "responses": ["True est Vrai en Python. Il est de type bool. True commence par une lettre majuscule."]
+       },
+       {"tag": "false",
+        "patterns": ["Qu'est-ce que False ?","C'est quoi False ?","False","false","Faux"],
+        "responses": ["False est Faux en Python. Il est de type bool. False commence par une lettre majuscule."]
+       },
+       {"tag": "and",
+        "patterns": ["Qu'est-ce que and?","C'est quoi and ?","and"],
+        "responses": ["and est un opérateur logique. Il représente le et logique. True and True est True. True and False est False. False and True is False. False and False is False. "]
+       },
+       {"tag": "or",
+        "patterns": ["Qu'est-ce que or ?","C'est quoi or ?","or"],
+        "responses": ["or est un opérateur logique. Il représente le or logique. True or True est True. True or False est False. False or True is True. False or False is False. "]
+       },
+       {"tag": "not",
+        "patterns": ["Qu'est-ce que not ?","C'est quoi not ?","not"],
+        "responses": ["not est un opérateur logique. Il représente la négation. not(True) est False. not(False) est True."]
+       },
+       {"tag": "conditionnelle",
+        "patterns": ["C'est quoi une instruction conditionnelle ?","Quel sont les instructions conditionnelle ?","Qu'est-ce qu'une instruction conditionnelle ?","Quelles sont les instructions conditionnelles ?","instructions conditionnelles","instruction conditionnelle","Qu'est-ce que if ?","Qu'est-ce que elif ?","Qu'est-ce que else ?","if","else","elif"],
+        "responses": ["Les instructions conditionnelles sont utilisées pour effectuer des actions ou des calculs selon le résultat de l'évaluation d'une condition. Elles permettent de prendre des décisions. Les conditionnelles sont introduites par if. On peut avoir des conditionnelles avec seulement un if, avec un if else, ou avec if elif else quand il y a plus de conditions à évaluer."]
+       },
+       {"tag": "IDE",
+        "patterns": ["Quelle IDE peut-on utiliser ?","Quel éditeur utiliser ?","éditeur","IDE"],
+        "responses": ["IDE veut dire Integrated Development Environment. Un IDE est utilisé pour faciliter le codage informatique. Il en existe beaucoup pour Python. Google Colab, IDLE, PyCharm, Spyder et Visual Studio."]
+       },
+       {"tag": "python",
+        "patterns": ["Qu'est-ce que Python ?","Parlez-moi de Python","Pourquoi utiliser Python ?","Je veux en savoir plus sur Python","A quoi sert python ?"],
+        "responses": ["Python est un langage de programmation populaire. Il a été créé par Guido Van Rossum et publié en 1991. Il est utilisé pour le développement de logiciels, le développement Web (côté serveur), et la science des données."]
+       },
+       {"tag": "versiondePython",
+        "patterns": ["Quelle est la version la plus utilisée de Python ?","Quelle est la version actuelle de Python ?","version","version actuelle"],
+        "responses": ["Python 3 est la version de Python la plus utilisée."]
+       },
+       {"tag": "print",
+        "patterns": ["Comment afficher une chaine ? ","Comment afficher une chaîne de caractères ? ","afficher une chaine","Qu'est-ce que print ?","C'est quoi print ?","print"],
+        "responses": ["Pour afficher une chaîne, on utilise la fonction print. print('Bonjour') permet d'imprimer Bonjour. De la même manière, print('Bon'+'jour') affiche Bonjour également. print('Bon', 'jour') affiche Bon jour (avec un espace)."]
+       },
+       {"tag": "string",
+        "patterns": ["C'est quoi une chaîne ?","Qu'est-ce qu'une chaîne ?","C'est quoi une chaîne de caractères ?","Qu'est-ce qu'une chaîne de caractères ?","C'est quoi une string ?","chaîne","chaîne de caractères","string","Comment créer une chaîne de caractères ?","comment créer une chaîne ?","Comment définir une chaîne ?","Comment définir une chaîne de caractères ?","définir une chaîne","créer une chaîne","créer une chaîne de caractères","définir une chaîne de caractères","string"],
+        "responses": ["Une chaîne de caractères est une séquence de caractères Unicode qui peut être une combinaison de lettres, de chiffres et de symboles spéciaux. Le type d'une chaîne de caractères est string. Une chaîne est entourée de guillemets simples ou doubles."]
+       },
+       {"tag": "stringconcaténation",
+        "patterns": ["Comment concatener deux chaines ?","Comment concatener des chaines ?","C'est quoi la concatenation ?","A quoi sert la concatenation ?","concatener","concatenation","Comment fusionner deux chaines ?","Comment additionner deux chaines ?","Comment fusionner des chaines ?","Comment additionner des chaines ?"],
+        "responses": ["Pour concatener (fusionner, additionner) des chaines, on utilise le caractere +. 'Bonjour' + 'le monde' est 'Bonjourle monde'. Il faut faire attention et mettre les caracteres de spearation. Pour obtenir 'Bonjour le monde', on doit ecrire 'Bonjour' + ' le monde'."]
+       },
+       {"tag": "caractères",
+        "patterns": ["Comment obtenir la taille d'une chaîne ?","Comment obtenir la taille d'une chaîne de caractères ?","taille d'une chaîne","taille d'une chaîne de caractères","len sur une chaîne de caractères","len sur une chaîne"],
+        "responses": ["La taille d'une chaîne de caractères peut être obtenue avec la fonction len. len(s) est la taille de la chaîne s. "]
+       },
+       {"tag": "liste",
+        "patterns": ["Qu'est-ce qu'une liste ?","Qu'est-ce que list ?","Comment créer une liste ?","Comment définir une liste ?"],
+        "responses": ["Les listes sont construites avec les crochets ([ et ]) en Python. ma_liste = [1,2,3] est une liste. [] est la liste vide. Les éléments d'une liste peuvent changer. Les listes sont donc mutables. Dans une liste, le premier élément est à la position 0.", "Les listes sont construites avec les crochets ([ et ]) en Python. ma_liste = [1,2,3] est une liste. [] est la liste vide. Les éléments d'une liste peuvent changer. Les listes sont donc mutables. "]
+       },
+       {"tag": "videruneliste",
+        "patterns": ["Comment vider une liste ?","vider une liste", "fonctions sur les listes","manipuler les listes"],
+        "responses": ["Pour vider une liste, on utilise la fonction clear. ma_liste.clear() vide la liste ma_liste."]
+       },
+       {"tag": "tailled'uneliste",
+        "patterns": ["Comment obtenir la taille d'une liste ?","taille d'une liste","len sur une liste","fonction len sur une liste"],
+        "responses": ["La taille d'une liste peut être obtenue avec la fonction len. len(ma_liste) est la taille de la liste ma_liste."]
+       },
+       {"tag": "listevide",
+        "patterns": ["Qu'est-ce que la liste vide ?.","Qu'est-ce que [] ?","liste vide","[]"],
+        "responses": ["La liste vide est représentée par []."]
+       },
+       {"tag": "creationdeliste",
+        "patterns": ["Comment créer une liste avec une séquence de nombres ?","Comment utiliser range pour créer une liste avec une séquence de nombres ?"],
+        "responses": ["On peut utiliser les fonctions list et range pour créer une liste qui contient une séquence de nombres. list(range(5)) génère la liste [0,1,2,3,4]. (1, 10, 2)"]
+       },
+       {"tag": "listederecherche",
+        "patterns": ["Comment rechercher un élément dans une liste ?","rechercher un élément dans une liste","élément dans une liste","Comment vérifier si un élément est dans une liste ?","Comment vérifier si un élément appartient a une liste ?"],
+        "responses": ["On peut utiliser l'opérateur in pour tester l'existence d'un élément dans une liste. 3 in [1,2,3] renvoie True."]
+       },
+       {"tag": "élémentd'uneliste",
+        "patterns": ["Acceder a un element a une position specifique dans une liste","Extraire un element a une position specifique dans une liste","Manipuler un élément d'une liste","Extraction d'un element a une position specifique dans une liste","Comment acceder a un element dans une liste ?","Comment extraire un element dans une liste ?","Comment extraire une sous-liste ?","sous-liste","sous-listes"],
+        "responses": ["On peut extraire l’element a la position i dans une liste ma_liste en utilisant ma_liste[i]. On peut egalement extraire des sous-listes. ma_liste[debut:fin] extrait la sous-liste avec les elements de la position debut a fin-1. ma_liste[i :] extrait la sous-liste avec les elements de la position i jusqu’à la fin. Ma_liste[ :i] extrait la sous-liste avec les éléments du début a la position i-1."]
+       },
+       {"tag": "créeruneliste",
+        "patterns": ["Comment créer une liste de listes ?","liste de listes"],
+        "responses": ["Une liste de liste est telle que la liste contient des listes. [[1,2], [], [1,2,6]] est une liste de listes."]
+       },
+       {"tag": "minimumd'uneliste",
+        "patterns": ["minimum d'une liste","Comment obtenir le minimum d'une liste ?"],
+        "responses": ["La fonction min permet de récupérer le minimum d'une liste, l'élément le plus petit d'une liste. min[0,1,7,2,-1] est -1."]
+       },
+       {"tag": "maximumd'uneliste",
+        "patterns": ["maximum d'une liste","Comment obtenir le maximun d'une liste ?"],
+        "responses": ["La fonction max permet de récupérer le maximum d'une liste, l'élément le plus grand d'une liste. max[0,1,7,2,-1] est 7."]
+       },
+       {"tag": "appendliste",
+        "patterns": ["Comment ajouter un élément a une liste ?","ajouter un élément a une liste","insert","append"],
+        "responses": ["La fonction append permet d'ajouter un élément a la fin d'une liste. Si ma_liste est [1,3], ma_liste.append(7) ajoute 7 à la liste. ma_liste devient [1,3,7]. La fonction insert permet d’ajouter un élément à la position i dans une liste. Si ma_liste est [1,3,7], ma_liste.insert(1,17) insère 17 à la position 1 dans la liste. ma_liste devient [1,17,3,7]."]
+       },
+       {"tag": "supprimerlaliste",
+        "patterns": ["Comment supprimer un élément d'une liste ?","supprimer un élément d'une liste","Comment enlever un élément d'une liste ?","enlever un élément d'une liste","pop","del"],
+        "responses": ["La fonction del permet de supprimer un élément d’une liste. del ma_liste[3] supprime l'élément à la position 3 dans la liste. ma_liste.pop() permet d’enlever l'élément à la dernière position de la liste."]
+       },
+       {"tag": "occurrencesd'unélément",
+        "patterns": ["Comment déterminer le nombre d'occurrences d'un élément dans une liste ?","nombre d'occurrences d'un élément dans une liste","compter les occurences d'un élément dans une liste"],
+        "responses": ["La fonction count renvoie le nombre d'occurrences d'un élément dans une liste. Si ma_liste est [1,7,3,1], ma_liste.count(1) renvoie 2 car 1 apparaît 2 fois dans la liste."]
+       },
+       {"tag": "Commentvérifiersiunelisteestvide",
+        "patterns": ["Comment vérifier si une liste est vide ?","Comment savoir si une liste est vide ?","Comment tester si une liste est vide ?","tester si une liste est vide","vérifier si une liste est vide","savoir si une liste est vide"],
+        "responses": ["Une liste est vide si elle n'a aucun elements. On peut verifier que len(ma_liste) == 0. "]
+       },
+       {"tag": "splitliste",
+        "patterns": ["Comment diviser une chaîne en liste ?","Comment diviser une chaîne de caractères en liste ?", "Comment convertir une chaîne en liste ?","Comment convertir une chaîne de caractères en liste ?","Qu'est-ce que split ?","split"],
+        "responses": ["La fonction split découpe une chaîne de caractères en plusieurs éléments appelés champs en se basant sur un séparateur. Si s est la chaîne de caractères Hello : Test : Au revoir, s.split(':') crée la liste [ 'Hello', 'Test', 'Au revoir']."]
+       },
+       {"tag": "positiond'unélément",
+        "patterns": ["Comment obtenir la position d'un élément dans une liste ?","position d'un élément dans une liste","position d'un élément"],
+        "responses": ["La fonction index permet de retrouver l'indice du premier élément d'une liste égal à une valeur donnée. Avec L = [20,8,9,18,9,15,14] , L.index(9) vaut 2. "]
+       },
+       {"tag": "tuple",
+        "patterns": ["C'est quoi un tuple ?","Qu'est-ce qu'un tuple ?","tuple","Comment définir un tuple ?","Comment créer un tuple ?"],
+        "responses": ["Un tuple est une collection ordonnée immutable. L'ordre compte et la valeur des éléments d'un tuple ne peuvent pas changer.  On crée un tuple en utilisant les parenthèses. (1,2,3,4) est un tuple. Dans un tuple, le premier élément est à la position 0."]
+       },
+       {"tag": "differencestupleslistes",
+        "patterns": ["Les tuples sont-ils plus efficaces que les listes en Python ?","Quelles sont les différences entre les tuples et les listes ?","différences tuples et listes","différences tuples listes"],
+        "responses": ["Les tuples et les listes sont utilisés dans des situations différentes. Si on veut créer une liste de noms, on va utiliser une liste. liste_nom est ['Ibrahima', 'Balla']. Si on veut décrire une personne, on peut utiliser un tuple où le premier élément est le nom et le deuxième est l’âge. tuple_personne est ('Ibrahima', '10'). "]
+       },
+       {"tag": "mutable",
+        "patterns": ["Qu'est-ce que mutable ?","mutable","Que veut dire mutable ?"],
+        "responses": ["Une liste peut être modifiée. Elle est mutable."]
+       },
+       {"tag": "immutable",
+        "patterns": ["Qu'est-ce que immutable ?","Que veut dire immutable ?","immutable"],
+        "responses": ["Un tuple ne peut pas être modifié. Il est immutable."]
+       },
+       {"tag": "lenpouruntuple",
+        "patterns": ["Comment compter le nombre d'éléments d'un tuple ?","nombre d'éléments d'un tuple","len pour un tuple"],
+        "responses": ["La taille d'un tuple peut être obtenue avec la fonction len. len(t) est la taille du tuple t."]
+       },
+       {"tag": "élémentdansuntuple",
+        "patterns": ["Comment accéder à un élément dans un tuple ?","élément dans un tuple"],
+        "responses": ["L'élément à la position i dans un tuple t est t[i]. Le premier élément d'un tuple est la position 0."]
+       },
+       {"tag": "qu'est-cequepython",
+        "patterns": ["Qu'est-ce que Python ?","Python c'est quoi ?","C'est quoi Python ?","Pourquoi Python a-t-il été inventé ? ","Quels sont les avantages de Python ?","Lister les avantages de Python","Pourquoi Python est-il si populaire ?"],
+        "responses": ["Python est un langage de programmation interprété, interactif et orienté-objet. Il est utilisé dans de nombreuses filières. De nos jours, Python semble être le langage le plus abordable pour les débutants. Il est utilisé dans les filières en informatique mais aussi en économie, humanités etc. "]
+       },
+       {"tag": "documentationdepython",
+        "patterns": ["Comment obtenir la documentation de Python ?","Où puis-je obtenir la documentation de Python ?","Quel site consulter pour apprendre Python ?"],
+        "responses": ["La documentation officielle de Python est disponible ici : https://docs.python.org/3/. Pour apprendre un langage de programmation, il est important de pratiquer à travers des tutoriels et exercices, et même de programmer son propre projet."]
+       },
+       {"tag": "programmationpourlesdébutants",
+        "patterns": ["Quel est le meilleur langage de programmation pour les débutants ?","Est-ce qu'il y a un meilleur langage de programmation pour les débutants ?","Est-ce que Python est adapté comme premier langage de programmation ?"],
+        "responses": ["Il y a beaucoup de langages de programmation. De nos jours, Python semble être le langage le plus abordable pour les débutants. Il est utilisé dans les filières en informatique mais aussi en économie, humanités etc. "]
+       },
+       {"tag": "quiutilisepython",
+        "patterns": ["Combien de personnes utilisent Python ?","Est-ce que Python est populaire ?","Quels projets sont développés en Python ?","Quels projets connus sont développés en Python ?","Qui utilise Python ?","Quelles entreprises utilisent Python ?"],
+        "responses": ["Les plus grandes entreprises telles que Google et Facebook utilisent Python tous les jours. Il y a beaucoup d'utilisateurs de Python dans le monde. Python est utilisé pour le codage de différents logiciels, du web à la science des données. Vous pouvez également consulter la liste des projets qui utilisent Python ici : https://www.python.org/about/success."]
+       },
+       {"tag": "futursdéveloppements",
+        "patterns": ["Quelles sont les nouveautés attendues ?","Quels sont les nouveaux développements attendus ?","Quelles seront les nouvelles fonctionnalités ?","Quel sont les futurs développements ?","futur","L'évolution de python"],
+        "responses": ["Pour en savoir plus, vous pouvez regarder les Propositions d'Amélioration de Python (« Python Enhancement Proposals » ou PEP) sur https://www.python.org/dev/peps."]
+       },
+       {"tag": "fluxdecontrôle",
+        "patterns": ["Quelles sont les instructions de flux de contrôle ?","flux de contrôle","Quelles sont les instructions de contrôle ?","instructions de contrôle"],
+        "responses": ["Les instructions de tests telles que les conditionnelles et les boucles for et while sont des instructions de controle. "]
+       },
+       {"tag": "indentation",
+        "patterns": ["Qu'est-ce qu'une identation ?","indentation"],
+        "responses": ["En Python, il est obligatoire d'indenter les blocs de code. Indenter veut dire mettre un décalage de quelques espaces au début de la ligne de code. Les blocs sont déterminés par les indentations."]
+       },
+       {"tag": "bouclefor",
+        "patterns": ["Qu'est-ce que for ?","Quand utilise-t-on for ?","Quand utilise-t-on une boucle for ?","Qu'est-ce qu'une boucle for ?","Qu'est-ce que la boucle for ?","boucle for","for"],
+        "responses": ["Une boucle for est un type de boucle. Elle permet de repeter des instructions lorsque l'on sait combien de fois a l'avance. La boucle est repetee tant que la condition de la boucle est vraie. La syntaxe d'une boucle for est for condition : instructions."]
+       },
+       {"tag": "boucle",
+        "patterns": ["Qu'est-ce qu'une boucle ?","Comment faire une boucle ?","répéter des instructions","Comment répéter des instructions ?","boucle"],
+        "responses": ["Une boucle est une construction de programme qui permet de répéter des instructions. Il y a des boucles for et des boucles while. On utilise une boucle for quand on sait à l'avance combien de fois on doit exécuter une boucle. On utilise une boucle while quand on ne sait pas à l'avance combien de fois on doit exécuter une boucle."]
+       },
+       {"tag": "bouclewhile",
+        "patterns": ["Quand utilise-t-on while ?","Qu'est-ce que while ?","Quand utilise-t-on une boucle while ?","Qu'est-ce qu'une boucle while ?","Qu'est-ce que la boucle while ?","boucle while","while"],
+        "responses": ["Une boucle while est un type de boucle. Elle permet de répéter des instructions lorsque l'on ne sait pas combien de fois à l'avance. La boucle est répétée tant que la condition de la boucle est vraie.  La syntaxe d'une boucle while est while condition : instructions."]
+       },
+       {"tag": "boucleinfinie",
+        "patterns": ["Qu'est-ce qu'une boucle infinie ?","boucle infinie"],
+        "responses": ["Une boucle infinie est une boucle qui ne s'arrête jamais."]
+       },
+       {"tag": "range",
+        "patterns": ["A quoi sert la fonction range ?","A quoi sert range ?","Qu'est-ce que range ?","range","Comment utiliser range ?"],
+        "responses": ["range() est une fonction Python qui génère une séquence de nombres. range([début], fin[, pas]) génére les nombres du début à fin (exclus) avec le pas fourni. Les paramètres début et pas sont optionnels.  range(10) génère les nombres de 0 à 9. range(5,10) génère les nombres de 5 à 9. range(5,10,2) génère les nombres 5, 7, et 9. "]
+       },
+       {"tag": "parcourirlesélémentsd'uneliste",
+        "patterns": ["Comment faire une boucle sur les éléments d'une liste ?","parcourir une liste","parcourir les éléments d'une liste"],
+        "responses": ["for i in ma_liste : permet de parcourir les éléments d'une liste"]
+       },
+       {"tag": "nompython",
+        "patterns": ["D'où vient le nom Python ?","nom du langage Python","nom Python"],
+        "responses": ["Le nom du langage de programmation Python vient du nom d'une troupe d'humoristes rendue célèbre, dans les années 1970, grâce à la série télévisée anglaise Monty Python's Flying Circus."]
+       },
+       {"tag": "développépython",
+        "patterns": ["Qui a créé Python ?","Qui a développé Python ?","Qui est le développeur de Python ?","En quelle année ?","développeur de Python"],
+        "responses": ["Guido van Rossum, un hollandais, a développé Python en 2011."]
+       },
+       {"tag": "sensibilitéàlacasse",
+        "patterns": ["Qu'est-ce que la casse ?","Qu'est-ce que sensibilité à la casse ?","sensibilité à la casse","casse"],
+        "responses": ["Tout ce qui est sensible  la casse fait la distinction entre les lettres majuscules et minuscules. Text2 et text2 sont différents. Python est un langage sensible à la casse."]
+       },
+       {"tag": "googlecolab",
+        "patterns": ["Qu'est-ce que Google Colab ?","Google Colab","Colab"],
+        "responses": ["Google Colab permet d'écrire et d'exécuter du code Python par le biais du navigateur. On n'a pas besoin d'installer Python et un éditeur sur son ordinateur. Il est utilisé pour des applications professionnelles d'intelligence artificielle, mais aussi dans l’éducation."]
+       }
+   ]
+}
